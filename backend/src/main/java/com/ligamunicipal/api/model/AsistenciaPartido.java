@@ -1,0 +1,2 @@
+package com.ligamunicipal.api.model; import jakarta.persistence.*; import java.time.*;
+@Entity @Table(uniqueConstraints=@UniqueConstraint(columnNames={"partido_id","jugador_id"})) public class AsistenciaPartido extends BaseEntity { @ManyToOne(optional=false) public PartidoJornada partido; @ManyToOne(optional=false) public JugadorPlantilla jugador; @Enumerated(EnumType.STRING) public EstadoAsistencia estadoAsistencia=EstadoAsistencia.SIN_CONFIRMAR; public Instant fechaRespuesta; }

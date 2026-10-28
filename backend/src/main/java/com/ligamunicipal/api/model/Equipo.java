@@ -1,0 +1,3 @@
+package com.ligamunicipal.api.model;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import java.math.BigDecimal;
+@Entity public class Equipo extends BaseEntity { @NotBlank public String nombre; @Enumerated(EnumType.STRING) public FormatoEquipo formato=FormatoEquipo.FUTBOL_7; @Min(1) public int tamanoAlineacion=4; @DecimalMin("0.0") public BigDecimal presupuestoMaximo=BigDecimal.valueOf(100); public String colorHex="#16a34a"; @Column(unique=true,nullable=false) public String codigoInvitacion; @Enumerated(EnumType.STRING) public MetodoPrecios metodoPreciosIni=MetodoPrecios.MANUAL; public boolean encuestaPreciosAbierta; }

@@ -1,0 +1,2 @@
+package com.ligamunicipal.api.model; import jakarta.persistence.*; import java.math.*; import java.time.*;
+@Entity public class HistorialMercado extends BaseEntity { @ManyToOne(optional=false) public JugadorPlantilla jugador; @ManyToOne public PartidoJornada partido; public BigDecimal valorMercado; public BigDecimal notaMediaJornada; public boolean fueMvp; public Instant fechaRegistro=Instant.now(); }

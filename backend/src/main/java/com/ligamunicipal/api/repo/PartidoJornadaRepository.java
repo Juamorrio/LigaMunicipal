@@ -1,0 +1,1 @@
+package com.ligamunicipal.api.repo; import org.springframework.data.jpa.repository.JpaRepository; import com.ligamunicipal.api.model.PartidoJornada; import java.util.*; public interface PartidoJornadaRepository extends JpaRepository<PartidoJornada,UUID> {  List<PartidoJornada> findByEquipoId(UUID equipoId); }

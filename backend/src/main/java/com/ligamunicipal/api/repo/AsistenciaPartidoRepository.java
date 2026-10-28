@@ -1,0 +1,1 @@
+package com.ligamunicipal.api.repo; import org.springframework.data.jpa.repository.JpaRepository; import com.ligamunicipal.api.model.AsistenciaPartido; import java.util.*; public interface AsistenciaPartidoRepository extends JpaRepository<AsistenciaPartido,UUID> { Optional<AsistenciaPartido> findByPartidoIdAndJugadorId(UUID partidoId,UUID jugadorId); }

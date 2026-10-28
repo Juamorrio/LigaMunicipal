@@ -1,0 +1,3 @@
+package com.ligamunicipal.api.model;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import java.math.BigDecimal;
+@Entity @Table(uniqueConstraints=@UniqueConstraint(columnNames={"jugador_id","miembro_id"})) public class PropuestaPrecioInicial extends BaseEntity { @ManyToOne(optional=false) public JugadorPlantilla jugador; @ManyToOne(optional=false) public MiembroEquipo miembro; @NotNull @DecimalMin("0.0") public BigDecimal valorPropuesto; }

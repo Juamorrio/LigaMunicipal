@@ -1,0 +1,1 @@
+package com.ligamunicipal.api.repo; import org.springframework.data.jpa.repository.JpaRepository; import com.ligamunicipal.api.model.DetalleAlineacion; import java.util.*; public interface DetalleAlineacionRepository extends JpaRepository<DetalleAlineacion,UUID> {  }

@@ -1,0 +1,2 @@
+package com.ligamunicipal.api.repo; import org.springframework.data.jpa.repository.JpaRepository; import com.ligamunicipal.api.model.PropuestaPrecioInicial; import java.util.*; import java.util.UUID;
+public interface PropuestaPrecioInicialRepository extends JpaRepository<PropuestaPrecioInicial,UUID> { List<PropuestaPrecioInicial> findByJugadorEquipoId(UUID equipoId); Optional<PropuestaPrecioInicial> findByJugadorIdAndMiembroId(UUID jugadorId,UUID miembroId); }

@@ -1,0 +1,2 @@
+package com.ligamunicipal.api.model; import com.fasterxml.jackson.annotation.JsonIgnore; import jakarta.persistence.*; import java.math.*;
+@Entity @Table(uniqueConstraints=@UniqueConstraint(columnNames={"alineacion_id","jugador_id"})) public class DetalleAlineacion extends BaseEntity { @JsonIgnore @ManyToOne(optional=false) public AlineacionFantasy alineacion; @ManyToOne(optional=false) public JugadorPlantilla jugador; @Enumerated(EnumType.STRING) public Posicion posicionAsignada; public boolean esCapitan; public BigDecimal puntosObtenidos=BigDecimal.ZERO; }

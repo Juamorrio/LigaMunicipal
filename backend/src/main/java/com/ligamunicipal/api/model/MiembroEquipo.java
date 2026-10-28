@@ -1,0 +1,3 @@
+package com.ligamunicipal.api.model;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import java.math.BigDecimal;
+@Entity @Table(uniqueConstraints=@UniqueConstraint(columnNames={"equipo_id","usuario_id"})) public class MiembroEquipo extends BaseEntity { @ManyToOne(optional=false) public Equipo equipo; @ManyToOne(optional=false) public Usuario usuario; @ManyToOne public JugadorPlantilla jugadorPlantilla; public boolean esJugadorReal; @Enumerated(EnumType.STRING) public RolMiembro rol=RolMiembro.MIEMBRO; public BigDecimal puntosTotales=BigDecimal.ZERO; public int posicionActualRanking; }

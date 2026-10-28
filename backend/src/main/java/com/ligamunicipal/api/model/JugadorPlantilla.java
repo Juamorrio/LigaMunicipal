@@ -1,0 +1,3 @@
+package com.ligamunicipal.api.model;
+import jakarta.persistence.*; import jakarta.validation.constraints.*; import java.math.BigDecimal;
+@Entity public class JugadorPlantilla extends BaseEntity { @ManyToOne(optional=false) public Equipo equipo; @NotBlank public String apodo; public String avatarUrl; @Enumerated(EnumType.STRING) public Posicion posicionPrincipal; @Enumerated(EnumType.STRING) public Posicion posicionSecundaria; @DecimalMin("0") public BigDecimal valorMercadoActual=BigDecimal.valueOf(5); public BigDecimal variacionUltimaJornada=BigDecimal.ZERO; public BigDecimal mediaPuntos=BigDecimal.ZERO; public boolean activo=true; }

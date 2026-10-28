@@ -1,0 +1,1 @@
+package com.ligamunicipal.api.repo; import org.springframework.data.jpa.repository.JpaRepository; import com.ligamunicipal.api.model.Usuario; import java.util.*; public interface UsuarioRepository extends JpaRepository<Usuario,UUID> { Optional<Usuario> findByEmailIgnoreCase(String email); }

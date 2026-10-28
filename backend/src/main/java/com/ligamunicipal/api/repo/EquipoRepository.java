@@ -1,0 +1,1 @@
+package com.ligamunicipal.api.repo; import org.springframework.data.jpa.repository.JpaRepository; import com.ligamunicipal.api.model.Equipo; import java.util.*; public interface EquipoRepository extends JpaRepository<Equipo,UUID> {  }
